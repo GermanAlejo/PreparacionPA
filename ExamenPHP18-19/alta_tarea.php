@@ -10,7 +10,7 @@ function nuevaTarea($titulo, $desc, $perfiles, $tiempos, $anexo) {
             . " VALUES (NULL, '" . $titulo . "', '" . $desc . "', '" . $anexo . "', null, '"
             . $perfiles . "', '" . $tiempos . "')";
 
-    //$query = mysqli_query($con, $sql);
+    $query = mysqli_query($con, $sql);
 
     if (!$query) {
         $res = false;
@@ -45,17 +45,28 @@ function nuevaTarea($titulo, $desc, $perfiles, $tiempos, $anexo) {
 
                     $todoOK = true;
 
-                    if (isset($_POST['titulo']) && isset($_POST[descripcion])) {
+                    if (isset($_POST['titulo']) && isset($_POST['descripcion'])) {
 
-                        $arraySanitize = array(
-                            'titulo' => FILTER_SANITIZE_STRING,
-                            'descripcion' => FILTER_SANITIZE_STRING
-                        );
+//                        $arraySanitize = array(
+//                            'titulo' => FILTER_SANITIZE_STRING,
+//                            'descripcion' => FILTER_SANITIZE_STRING
+//                        );
+//
+//                        $formInput = filter_var_array($arraySanitize);
+//
+//                        $titulo = $formInput['titulo'];
+//                        $descripcion = $formInput['descripcion'];
 
-                        $formInput = filter_var_array($arraySanitize);
-
-                        $titulo = $formInput['titulo'];
-                        $descripcion = $formInput['descripcion'];
+                        $titulo = filter_var(trim($_POST['titulo'], FILTER_SANITIZE_MAGIC_QUOTES));
+                        if ($titulo == '') {
+                            echo "TITULO - NO SE PUEDE<br/>";
+                            $todoOK = False;
+                        }
+                        $descripcion = filter_var(trim($_POST['descripcion']), FILTER_SANITIZE_MAGIC_QUOTES);
+                        if ($descripcion == '') {
+                            echo "DESCRIPCION - NO SE PUEDE<br/>";
+                            $todoOK = False;
+                        }
 
                         $perfiles = array();
                         $tiempos = array();
@@ -115,7 +126,6 @@ function nuevaTarea($titulo, $desc, $perfiles, $tiempos, $anexo) {
                                 $todoOK = false;
                             } else {
                                 $nombreAnexo = time() . ".pdf";
-                                
                             }
                         } else if (!isset($_FILES['anexo'])) {
                             $nombreAnexo = '';
@@ -130,13 +140,13 @@ function nuevaTarea($titulo, $desc, $perfiles, $tiempos, $anexo) {
 
                         $perfiles = implode(',', $perfiles);
                         $tiempos = implode(',', $tiempos);
-                        echo $titulo . $descripcion;
-                        if (nuevaTarea($titulo, $descripcion, $perfiles, $tiempos, $anexo)) {
+
+                        if (nuevaTarea($titulo, $descripcion, $perfiles, $tiempos, $nombreAnexo)) {
                             if ($anexo !== null) {
                                 move_uploaded_file($anexo['tmp_name'], 'anexos/' . $nombreAnexo);
                             }
-                            echo $titulo . $descripcion;
-                            //header('location: listado_tareas_jefe.php');
+
+                            header('location: listado_tareas_jefe.php');
                         } else {
                             echo 'Error al insertar';
                         }
