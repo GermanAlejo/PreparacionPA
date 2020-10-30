@@ -115,10 +115,8 @@ function nuevaTarea($titulo, $desc, $perfiles, $tiempos, $anexo) {
                                 }
                             }
                         }
-                        if (!empty($_FILES)) {
-                            echo 'loko';
-                        }
-                        if (isset($_FILES['anexo'])) {
+                        
+                        if ($_FILES['anexo']['error'] !== 4) {
 
                             $anexo = $_FILES['anexo'];
                             if ($anexo['type'] !== 'application/pdf' || $anexo['size'] / 1024 > 500) {
