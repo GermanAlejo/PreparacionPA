@@ -1,0 +1,305 @@
+.row {
+    padding: 6px;
+}
+.container, .container2 {
+    padding: 0 20px;
+}
+.container > div:first-child {
+    background: #cccccc;
+    padding: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.container > div:last-child {
+    padding-bottom: 15px;
+}
+.container h2 {
+    margin: 12px 12px 12px 33px;
+    position: relative;
+    font-size: 1.17em;
+}
+.container h2 .arrow:after {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    border: 5px solid transparent;
+    border-top-color: black;
+}
+.container h2 .arrow {
+    display: block;
+    border: 2px solid #000;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    border-radius: 100px;
+    top: 1px;
+    left: -24px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.container h2.closed .arrow {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.details > div {
+    border: 1px solid #E1E8EA;
+    margin-bottom: 10px;
+    border-left-width: 6px;
+    padding: 0px 10px 18px 18px;
+    position: relative;
+}
+.details > div.focused {
+    border-color: #576C71;
+}
+pre {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-left-width: 5px;
+    padding: 15px 0 15px 25px;
+    overflow: auto;
+}
+code {
+    padding: 0;
+    font-style: normal;
+}
+p code {
+    background: #ccc;
+    padding: 3px 7px;
+    font-weight: bold;
+}
+li > code {
+    background: #666;
+    padding: 1px 5px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 50px;
+    display: inline-block;
+    font-family: 'Open Sans', "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    color: #FAFAFA;
+}
+.class_names li { margin: 10px 0; font-size: 13px; }
+.box.ex { padding-top: 20px; }
+.howto h3, .howto h4 { margin: 0; }
+.ref button { padding: 4px 12px; margin: 6px 6px 0 0; }
+.ref pre { margin-top: 0; margin-bottom: 16px; }
+.ref-note { margin-top: 0; }
+.full_tbl { width: 100%; }
+.t1 td {
+    width: 50%;
+    float: left;
+}
+.t1 .td1 { padding-right: 6px; }
+.t1 .td2 { padding-left: 6px; }
+.t2 td {
+    width: 33.33333%;
+    float: left;
+}
+.t2 .td1 { padding-right: 3px; }
+.t2 .td2 { padding: 0 3px; }
+.t2 .td3 { padding-left: 3px; }
+.properties li:first-child, .sample {
+    background: yellowgreen;
+}
+.properties_toc span {
+    display: block;
+    border-width: 1px 0 1px 4px;
+    border-style: solid;
+    border-color: transparent;
+}
+.properties_toc span a {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+.properties_toc span:hover {
+    border-color: rgba(187, 187, 187, 0.4);
+}
+.properties_toc span.focused {
+    border-color: rgb(187, 187, 187);
+}
+.properties_toc span:last-child {
+    margin-bottom: 13px;
+}
+.main-content {
+    padding: 17px 1px;
+}
+.intro h2 {
+    margin: 0;
+}
+.all_prop {
+    position: relative;
+    padding-left: 300px;
+}
+.all_prop .contents {
+    height: 100%;
+    width: 280px;
+    top: 0;
+    position: absolute;
+    padding: 0;
+}
+.all_prop .contents.derived {
+    left: 0px !important;
+}
+.all_prop .contents.fixed {
+    position: fixed;
+    padding: 60px 0 10px 0;
+}
+.fit {
+    height: 100%;
+    width: 100%;
+}
+.container1.fit {
+    border: 2px solid #bbb;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.properties_toc {
+    padding-left: 30px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+}
+.properties_toc.bottom {
+    height: auto;
+    top: auto;
+    bottom: 0;
+}
+.box {
+    position: relative;
+}
+.box.details div {
+    width: 100%;
+    border-bottom: 1px solid;
+}
+.intro {
+    width: 100%;
+    min-height: 185px;
+    padding: 5px 265px 5px 0;
+}
+.comments {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    max-height: 200px;
+    border-left: 1px dashed;
+}
+.comments h3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+.comments ul {
+    padding-left: 75px;
+    margin: 10px 0 0;
+}
+.cont {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+.def, .type {
+    border: 1px dotted;
+    display: inline-block;
+    padding: 1px 4px 1px 1px;
+    font-size: 12px;
+}
+.def {
+    margin-right: 10px;
+}
+.def span, .type span {
+    background: #aaa;
+    color: white;
+    height: 100%;
+    display: inline-block;
+    padding: 0 5px;
+}
+.permalink, .permalink * {
+    box-sizing: content-box;
+}
+.container h2:hover .permalink {
+    opacity: 1;
+}
+.permalink:hover {
+    border-color: brown;
+}
+.permalink {
+    position: absolute;
+    overflow: hidden;
+    height: 24px;
+    width: 26px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: -1px 0 0 10px;
+    opacity: 0;
+}
+.permalink div {
+    width: 17px;
+    border: 2px solid;
+    border-color: inherit;
+    border-radius: 8px;
+    transform: rotate(-45deg);
+    margin: 8px 0 0 3px;
+    height: 4px;
+}
+.permalink div:before {
+    display: block;
+    content: " ";
+    height: 10px;
+    width: 2px;
+    background-color: #CCC;
+    position: absolute;
+    left: 8px;
+    top: -3px;
+}
+.permalink div:after {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    display: block;
+    content: " ";
+    border-top: 2px solid;
+    border-color: inherit;
+    width: 9px;
+}
+
+/* Comments box */
+.com_cc {
+    text-align: center;
+    padding: 8px 2px 12px 2px;
+    border: 1px solid #aaa;
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.com_cc a:hover {
+    color: blue;
+}
+.disq .commentbox {
+    display: inline-block;
+    height: 20px;
+    background-color: #729AE6;
+    border-radius: 6px;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 0 10px;
+}
+.disq .commentbox:after {
+    content: " ";
+    display: block;
+    border-style: solid;
+    border-width: 10px 0px 2px 8px;
+    border-color: #729AE6 transparent transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor de monedas - Examen JS/JQ</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    
+    <h2>Conversor de monedas - Examen JS/JQ</h2>
+    
+    <div id="entrada_div">
+        Cantidad:
+        <input type="text" id="entrada" size="10" />
+        <select id='moneda_entrada'> 
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+            <option value="CZK">CZK</option>
+        </select>
+    </div>
+    
+    <br />
+    
+    Conversiones:
+    <div id="conversiones_div"><div id="conversion1"><input type="text" id="salida1" size="10" readonly /><select id="moneda_salida1" class="moneda_salida">
+                <option value="EUR">EUR</option>
+                <option value="USD" selected>USD</option>
+                <option value="GBP">GBP</option>
+                <option value="CAD">CAD</option>
+                <option value="CZK">CZK</option>
+    </select><button>Intercambiar</button></div></div>
+    
+    <button>Agregar conversión</button>
+    
+</body>
+</html>

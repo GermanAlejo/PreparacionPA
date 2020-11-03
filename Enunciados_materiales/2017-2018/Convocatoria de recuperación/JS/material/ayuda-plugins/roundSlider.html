@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://roundsliderui.com/document.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Documentation - roundSlider (A free jQuery plugin)</title>
+    <meta name="description" content="A complete documentation about jQuery roundSlider plugin. It explains the usage of the plugin, properties, public methods and events.">
+    <meta name="keywords" content="roundslider documentation, round slider documentation">
+    <meta name="author" content="Soundar">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 month">
+    <!-- round slider, circular slider, half circular slider -->
+
+    <link rel="icon" href="http://roundsliderui.com/favicon.ico">
+    <link href="./roundSlider_files/layout.css" rel="stylesheet">
+    <link href="./roundSlider_files/document.css" rel="stylesheet">
+    <link href="./roundSlider_files/css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" async="" src="./roundSlider_files/heap-606938904.js"></script><script src="./roundSlider_files/jquery.min.js"></script>
+    <script src="./roundSlider_files/layout.js"></script>
+
+    <script src="./roundSlider_files/roundslider.min.js"></script>
+
+    <script src="./roundSlider_files/document-data.js"></script>
+    <script src="./roundSlider_files/document.js"></script>
+<script async="" type="text/javascript" src="./roundSlider_files/count.js"></script><script src="./roundSlider_files/count-data.js"></script></head>
+<body class="">
+    <div class="header anim">
+        <div class="header-left">
+            <div class="logo"></div>
+        </div>
+        <div class="header-right">
+            <div class="menu">
+                <a href="http://roundsliderui.com/playground.html">Playground</a>
+                <a href="http://roundsliderui.com/document.html" class="active-page">Documentation</a>
+                <a href="http://roundsliderui.com/demos.html">Demos</a>
+                <a href="http://roundsliderui.com/" class="first">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper" style="min-height: 717px;">
+        <div class="main-content">
+            <div class="row">
+                <div class="container2">
+                    <div class="box">
+                        <div class="intro">
+                            <div><h2>Introduction</h2></div>
+                            <div>
+                                <p>
+                                    Round slider is a jQuery plugin that allows the user to select a value or range of values by 
+                                    dragging the slider handle.
+                                </p>
+                                <p>
+                                    If you are here means that you are going to use this or you want to know about this. 
+                                    So this document will explain the things what you need to know.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="com_cc">
+                                <a target="_blank" href="http://roundsliderui.com/#disqus_comments" class="disq">
+                                    <span class="commentbox disqus-comment-count" data-disqus-url="http://roundsliderui.com/">502</span>
+                                    <span style="font-size: 16px;"> Comments</span>
+                                </a>
+                                <script type="text/javascript">
+                                    var disqus_shortname = 'roundslider';
+                                    var disqus_url = "http://roundsliderui.com/";
+                                    (function () {
+                                        var s = document.createElement('script'); s.async = true;
+                                        s.type = 'text/javascript'; s.src = '//roundslider.disqus.com/count.js';
+                                        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                                    }());
+                                </script>
+                            </div>
+                            <h3>Index</h3>
+                            <ul>
+                                <li><a class="link" href="http://roundsliderui.com/document.html#options">Options</a></li>
+                                <li><a class="link" href="http://roundsliderui.com/document.html#how-to-use-options">How to use Options?</a></li>
+                                <li><a class="link" href="http://roundsliderui.com/document.html#class-names">Class Names</a></li>
+                                <li><a class="link" href="http://roundsliderui.com/document.html#how-to-install">How to Install?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container">
+                    <div>
+                        <h2 id="options_link">Options<span class="arrow"></span><a class="permalink link" href="http://roundsliderui.com/document.html#options"><div></div></a></h2>
+                    </div>
+                    <div class="box">
+                        <p>The roundSlider options are classified as <b>properties</b> and <b>events</b>, 
+                            by using that we can interact with the control programmatically. 
+                            In addition some public <b>methods</b> also available to access the control.</p>
+                        <div class="all_prop">
+                            <div class="contents derived" style="left: 188px;">
+                                <div class="container1 fit">
+                                    <div class="fit" style="overflow: auto; position: relative;">
+                                        <div class="properties_toc"><h3>Properties</h3><span class="focused"><a class="link animation" href="http://roundsliderui.com/document.html#animation">animation</a></span><span class=""><a class="link width" href="http://roundsliderui.com/document.html#width">width</a></span><span><a class="link circleShape" href="http://roundsliderui.com/document.html#circleShape">circleShape</a></span><span class=""><a class="link disabled" href="http://roundsliderui.com/document.html#disabled">disabled</a></span><span><a class="link editableTooltip" href="http://roundsliderui.com/document.html#editableTooltip">editableTooltip</a></span><span><a class="link endAngle" href="http://roundsliderui.com/document.html#endAngle">endAngle</a></span><span class=""><a class="link handleSize" href="http://roundsliderui.com/document.html#handleSize">handleSize</a></span><span class=""><a class="link handleShape" href="http://roundsliderui.com/document.html#handleShape">handleShape</a></span><span><a class="link keyboardAction" href="http://roundsliderui.com/document.html#keyboardAction">keyboardAction</a></span><span class=""><a class="link max" href="http://roundsliderui.com/document.html#max">max</a></span><span><a class="link min" href="http://roundsliderui.com/document.html#min">min</a></span><span><a class="link mouseScrollAction" href="http://roundsliderui.com/document.html#mouseScrollAction">mouseScrollAction</a></span><span><a class="link radius" href="http://roundsliderui.com/document.html#radius">radius</a></span><span class=""><a class="link readOnly" href="http://roundsliderui.com/document.html#readOnly">readOnly</a></span><span><a class="link showTooltip" href="http://roundsliderui.com/document.html#showTooltip">showTooltip</a></span><span><a class="link sliderType" href="http://roundsliderui.com/document.html#sliderType">sliderType</a></span><span class=""><a class="link startAngle" href="http://roundsliderui.com/document.html#startAngle">startAngle</a></span><span><a class="link step" href="http://roundsliderui.com/document.html#step">step</a></span><span><a class="link value" href="http://roundsliderui.com/document.html#value">value</a></span><h3>Events</h3><span class=""><a class="link beforeCreate" href="http://roundsliderui.com/document.html#beforeCreate">beforeCreate</a></span><span><a class="link create" href="http://roundsliderui.com/document.html#create">create</a></span><span class=""><a class="link start" href="http://roundsliderui.com/document.html#start">start</a></span><span><a class="link stop" href="http://roundsliderui.com/document.html#stop">stop</a></span><span class=""><a class="link drag" href="http://roundsliderui.com/document.html#drag">drag</a></span><span><a class="link change" href="http://roundsliderui.com/document.html#change">change</a></span><h3>Methods</h3><span><a class="link setValue" href="http://roundsliderui.com/document.html#setValue">setValue</a></span><span class=""><a class="link getValue" href="http://roundsliderui.com/document.html#getValue">getValue</a></span><span><a class="link disable" href="http://roundsliderui.com/document.html#disable">disable</a></span><span class=""><a class="link enable" href="http://roundsliderui.com/document.html#enable">enable</a></span><span class=""><a class="link destroy" href="http://roundsliderui.com/document.html#destroy">destroy</a></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details">
+                            <div id="animation_link" class=""><h3>animation</h3><p>Enables or disables the handle movement animation.</p><p>As the control uses the CSS3 animation, so you can use any CSS3 transition effects to customize the animation type and speed. To know how to use custom animation check <a target="_blank" href="http://roundsliderui.com/demos.html#custom-animation">here</a>.</p><div class="cont"><div class="def"><span>default </span> true</div><div class="type"><span>type </span> Boolean</div></div></div><div id="width_link" class=""><h3>width</h3><p>Indicates the width (or thickness) of the slider.</p><div class="cont"><div class="def"><span>default </span> 18</div><div class="type"><span>type </span> Number</div></div></div><div id="circleShape_link"><h3>circleShape</h3><p>Indicates the circle shape to be render. The available circle shapes are,</p><ul><li>full</li><li>half-top</li><li>half-bottom</li><li>half-left</li><li>half-right</li><li>quarter-top-left</li><li>quarter-top-right</li><li>quarter-bottom-right</li><li>quarter-bottom-left</li><li>pie</li><li>custom-half</li><li>custom-quarter</li></ul><div class="cont"><div class="def"><span>default </span> "full"</div><div class="type"><span>type </span> String</div></div></div><div id="disabled_link" class="focused"><h3>disabled</h3><p>Sets the disable state or enable state of the control. While the control in the disable state we can't interact with this.</p><p>And in disable mode the control looks like in the blured state.</p><div class="cont"><div class="def"><span>default </span> false</div><div class="type"><span>type </span> Boolean</div></div></div><div id="editableTooltip_link"><h3>editableTooltip</h3><p>Enables the editable option of tooltip. When this property set as true, we can change the value by editing the tooltip.</p><div class="cont"><div class="def"><span>default </span> true</div><div class="type"><span>type </span> Boolean</div></div></div><div id="endAngle_link"><h3>endAngle</h3><p>Indicates the end point of the slider.</p><p><b>Multiple format supported:</b></p><ul><li><code> 180 </code> : Sets the fixed value, where the endAngle is 180°.</li><li><code>"+180"</code> : This is dependent to <a class="link" href="http://roundsliderui.com/document.html#startAngle">startAngle</a> property. If the startAngle is 90° then the endAngle considered as 270°.</li><li><code>"-90"</code> : This is also dependent to <a class="link" href="http://roundsliderui.com/document.html#startAngle">startAngle</a> property. If the startAngle is 180° then the endAngle considered as 90°.</li></ul><p></p><p>The endAngle property is applicable for "full" circle shape only. </p><div class="cont"><div class="def"><span>default </span> "+360"</div><div class="type"><span>type </span> String or Number</div></div></div><div id="handleSize_link" class=""><h3>handleSize</h3><p>The handleSize property mentions the size of the handle.</p><p><b>Multiple format supported:</b></p><ul><li><code> 22 </code> : Sets the fixed size, where the handle's height and width considered as 22.</li><li><code> "30,10" </code> : Sets the fixed size, where the handle's height considered as 30 and width considered as 10.</li><li><code>"+4"</code> : This is dependent to <a class="link" href="http://roundsliderui.com/document.html#width">width</a> property. If the width is 20 then the handleSize considered as 24.</li><li><code>"-4"</code> : This is also dependent to <a class="link" href="http://roundsliderui.com/document.html#width">width</a> property. If the width is 20 then the handleSize considered as 16.</li></ul><p></p><div class="cont"><div class="def"><span>default </span> "+0"</div><div class="type"><span>type </span> String or Number</div></div></div><div id="handleShape_link" class=""><h3>handleShape</h3><p>The handleShape property mentions the shape of the handle. Currently the following types are available:</p><ul><li>round</li><li>dot</li><li>square</li></ul><p>In addition you can make your own handle shape by customizing this. Please check <a class="link" href="http://roundsliderui.com/demos.html#custom-handle-shape">here</a> for handle customization.</p><div class="cont"><div class="def"><span>default </span> "round"</div><div class="type"><span>type </span> String</div></div></div><div id="keyboardAction_link"><h3>keyboardAction</h3><p>Enables or disables the keyboard functionality.</p><p>The slider value can be changed through the keyboard by using the arrow keys (Up, Down, Left, Right) and Home, Down keys.</p><div class="cont"><div class="def"><span>default </span> true</div><div class="type"><span>type </span> Boolean</div></div></div><div id="max_link" class=""><h3>max</h3><p>The  max property indicates the maximum value of the slider.</p><div class="cont"><div class="def"><span>default </span> 100</div><div class="type"><span>type </span> Number</div></div></div><div id="min_link"><h3>min</h3><p>The min property indicates the minimum value of the slider.</p><div class="cont"><div class="def"><span>default </span> 0</div><div class="type"><span>type </span> Number</div></div></div><div id="mouseScrollAction_link"><h3>mouseScrollAction</h3><p>Enables or disables the mouse scroll functionality.</p><p>The slider value can be changed through the mouse scrolling.</p><div class="cont"><div class="def"><span>default </span> false</div><div class="type"><span>type </span> Boolean</div></div></div><div id="radius_link"><h3>radius</h3><p>The radius property indicates the radius of the slider's circle.</p><p><b>Note : </b>The height and width of the control considered as (2 * radius).</p><div class="cont"><div class="def"><span>default </span> 85</div><div class="type"><span>type </span> Number</div></div></div><div id="readOnly_link" class=""><h3>readOnly</h3><p>This enables the control into the readOnly mode, so we can can't interact with the control when readOnly enabled.</p><div class="cont"><div class="def"><span>default </span> false</div><div class="type"><span>type </span> Boolean</div></div></div><div id="showTooltip_link"><h3>showTooltip</h3><p>Enables or disables the tooltip inside the slider.</p><div class="cont"><div class="def"><span>default </span> true</div><div class="type"><span>type </span> Boolean</div></div></div><div id="sliderType_link"><h3>sliderType</h3><p>Indicates the slider type to be render. The available slider types are:</p><ul><li>default</li><li>min-range</li><li>range</li></ul><div class="cont"><div class="def"><span>default </span> "default"</div><div class="type"><span>type </span> String</div></div></div><div id="startAngle_link" class=""><h3>startAngle</h3><p>Indicates the starting point of the slider.</p><p>The startAngle property is applicable for "full", "custom-half", "custom-quarter" and "pie" circle shapes only. </p><div class="cont"><div class="def"><span>default </span> 0</div><div class="type"><span>type </span> Number</div></div></div><div id="step_link"><h3>step</h3><p>Decides the number of steps or value should take while we move the handle.</p><div class="cont"><div class="def"><span>default </span> 1</div><div class="type"><span>type </span> Number</div></div></div><div id="value_link"><h3>value</h3><p>Sets or gets the value of the slider.</p><p></p><p></p><div>For default and min-range slider the property allows a single value (<b>ex:</b> value - 10).</div><div>For range slider the property allows two values separated by comma (<b>ex:</b> value - "30,60").</div><p></p><div class="cont"><div class="def"><span>default </span> null</div><div class="type"><span>type </span> String or Number</div></div></div><div id="beforeCreate_link" class=""><h3>beforeCreate</h3><p>This event triggered before the control will initialize.</p><p>At this point we can change the control's settings. And also this event can be cancellable, so we can prevent the control creation by 'return false'.</p><p></p></div><div id="create_link"><h3>create</h3><p>This event triggered after the control creation or initialization.</p></div><div id="start_link" class=""><h3>start</h3><p>This event triggered when the user starts to drag the handle.</p></div><div id="stop_link"><h3>stop</h3><p>This event triggered when the user stops from sliding the handle / when releasing the handle.</p></div><div id="drag_link" class=""><h3>drag</h3><p>This event triggered when the user moving the handle. On each mouse move the drag event will trigger.</p></div><div id="change_link"><h3>change</h3><p>This event triggered when the slider's value gets change.</p></div><div id="setValue_link"><h3>setValue</h3><p>This method is used to set the value to the slider control.</p><p><b>Note : </b> This method accepts the following possible parameters.</p><ul><li><b>setValue(value)</b> : This will set the corresponding value to the slider handle.<pre><code>setValue(30) - for default and min-range slider 
+
+setValue("30,60") - for range slider </code></pre></li><li><b>setValue(value, index)</b> : This is only applicable for range slider, which sets the value to the corresponding handle.Here the possible value of index is 1 or 2 only.<pre><code>setValue(35, 1) - it sets the first handle value as 35 </code></pre></li></ul><p></p></div><div id="getValue_link" class=""><h3>getValue</h3><p>This method is used to get the value from the slider control.</p><p><b>Note : </b> This method accepts the following possible parameters.</p><ul><li><b>getValue()</b> : Without any parameter, it will return the current slider value.<pre><code>getValue() - returns 30 for default and min-range slider 
+
+getValue() - returns "30,60" for range slider </code></pre></li><li><b>getValue(index)</b> : This is only applicable for range slider, which returns the value of the corresponding handle. Here the possible value of index is 1 or 2 only.<pre><code>getValue(1) - it returns the first handle value</code></pre></li></ul><p></p></div><div id="disable_link"><h3>disable</h3><p>Disables the slider control.</p><p><b>Note : </b> This method does not accept any parameters.</p><pre><code>$("#slider").roundSlider("disable");</code></pre></div><div id="enable_link" class=""><h3>enable</h3><p>Enables the slider control.</p><p><b>Note : </b> This method does not accept any parameters.</p><pre><code>$("#slider").roundSlider("enable");</code></pre></div><div id="destroy_link" class=""><h3>destroy</h3><p>Destroys the slider control and reverts the control element to the initial state.</p><p><b>Note : </b> This method does not accept any parameters.</p><pre><code>$("#slider").roundSlider("destroy");</code></pre></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container">
+                    <div>
+                        <h2 id="how-to-use-options_link">How to use Options ?<span class="arrow"></span><a class="permalink link" href="http://roundsliderui.com/document.html#how-to-use-options"><div></div></a></h2>
+                    </div>
+                    <div class="box howto">
+                        <p>In below, it shows the possible ways to use the Options. 
+                            <b>After the control initialization</b>, by using any one of the way we can access the control dynamically.</p>
+
+                        <div>
+                            <h3>Properties</h3>
+                            <p>From Properties, consider the value property. To get or set the value for the property:</p>
+
+                            <table class="full_tbl t1">
+                                <tbody><tr>
+                                    <td class="td1">
+                                        <h4>Setter</h4>
+                                        <pre><code>$("#control").roundSlider("option", "value", 50);
+
+        (or)
+
+$("#control").roundSlider("option", { "value", 50 });
+</code></pre>
+
+                                        <pre><code>var obj = $("#control").data("roundSlider");
+
+    obj.option("value", 50);</code></pre>
+                                    </td>
+                                    <td class="td2">
+                                        <h4>Getter</h4>
+                                        <pre><code>$("#control").roundSlider("option", "value");</code></pre>
+
+                                        <pre><code>var obj = $("#control").data("roundSlider");
+
+    obj.option("value");
+</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <p>where <code>obj</code> holds the current control's instance.</p>
+                        </div>
+
+                        <div>
+                            <h3>Events</h3>
+                            <p>In the following ways we can bind the events to the control.</p>
+
+                            <table class="full_tbl t2">
+                                <tbody><tr>
+                                    <td class="td1">
+                                        <h4>like anonymous function</h4>
+                                        <pre><code>$("#control").roundSlider({
+    change: function (e) {
+        console.log(e.value);
+    }
+});</code></pre>
+                                    </td>
+                                    <td class="td1">
+                                        <h4>through handler</h4>
+                                        <pre><code>$("#control").roundSlider({
+    change: "onValueChange"
+});
+
+function onValueChange (e) {
+    console.log(e.value);
+}
+                                             </code></pre>
+                                    </td>
+                                    <td class="td1">
+                                        <h4>jQuery like binding</h4>
+                                        <pre><code>$("#control").roundSlider();
+
+$("#control").on("change", function (e) {
+    console.log(e.value);
+}
+                                             </code></pre>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+
+                        <div>
+                            <h3>Public Methods</h3>
+                            
+                            <pre><code>$("#control").roundSlider("disable");</code></pre>
+
+                            <pre><code>var obj = $("#control").data("roundSlider");
+
+    obj.disable();</code></pre>
+
+                            <p>Passing arguments to the public method:</p>
+
+                            <pre><code>$("#control").roundSlider("setValue", 40, 1);
+        
+        (or)
+
+obj.setValue(40, 1);
+                                 </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container">
+                    <div>
+                        <h2 id="class-names_link">Class Names<span class="arrow"></span><a class="permalink link" href="http://roundsliderui.com/document.html#class-names"><div></div></a></h2>
+                    </div>
+                    <div class="box class_names">
+                        <p>The roundSlider has the following public classes, which user can overwrite these classes to apply their custom styles or themes.</p>
+                        <ul>
+                            <li>
+                                <code>.rs-path-color</code> : This class applies the background color for the <b>slider path</b>.
+                            </li>
+                            <li>
+                                <code>.rs-range-color</code> : This class applies the background color for the <b>slider range</b>.
+                            </li>
+                            <li>
+                                <code>.rs-bg-color</code> : This class applies the background color for the <b>slider</b> control.
+                            </li>
+                            <li>
+                                <code>.rs-border</code> : This class applies the border color for the <b>slider</b> control.
+
+                                <ul>
+                                    <li>
+                                        <code>.rs-border.rs-inner</code> : This class applies the styles for inner border alone.
+                                    </li>
+                                    <li>
+                                        <code>.rs-border.rs-outer</code> : This class applies the styles for outer border alone.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <code>.rs-handle</code> : This class added for the slider <b>handles</b>. 
+                                We can set the handle styles here.
+
+                                <ul>
+                                    <li>
+                                        <code>.rs-first .rs-handle</code> : Mentions the first handle of the slider.
+                                    </li>
+                                    <li>
+                                        <code>.rs-second .rs-handle</code> : Mentions the second handle of the slider. 
+                                        This is available at the range slider only.
+                                    </li>
+                                    <li>
+                                        <code>.rs-handle.rs-focus</code> : When the slider handle was focused, 
+                                        at that time the focus class added for the corresponding handle.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <code>.rs-animation .rs-transition</code> : This class applies the CSS3 animation related styles.
+                            </li>
+                        </ul>
+                        <br>
+                        <div>
+                            <b>Note : </b> If you have faced any problem while applying the colors, 
+                            then you can use the 
+                            <a target="_blank" href="http://roundsliderui.com/playground.html">Playground</a>
+                            to customize the colors.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container">
+                    <div>
+                        <h2 id="how-to-install_link">How to Install ?<span class="arrow"></span><a class="permalink link" href="http://roundsliderui.com/document.html#how-to-install"><div></div></a></h2>
+                    </div>
+                    <div class="box howto">
+                        <p>
+                            Just follow the below three steps to include the roundSlider into your application.
+                        </p>
+
+                        <div>
+                            <h3>Step 1 : Include the dependency files</h3>
+                            <p>Since <b>jQuery</b> is the basic dependency file, so include that. 
+                                And, for roundSlider include the control's <b>CSS</b> and <b>Script</b> file.</p>
+
+                            <div class="cdnFiles ref">
+                                <button>Switch to Local files</button>
+                                <pre><code><span>&lt;</span>script src="<a id="rjq" target="_blank" href="./roundSlider_files/jquery.min.js">https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js</a>"&gt;&lt;<span>/script&gt;</span>
+                                    
+<span>&lt;</span>link href="<a id="rcss" target="_blank" href="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.css">https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.css</a>" rel="stylesheet" /&gt;
+                                    
+<span>&lt;</span>script src="<a id="rjs" target="_blank" href="./roundSlider_files/roundslider.min.js">https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.js</a>"&gt;&lt;<span>/script&gt;</span>
+</code></pre>
+                            </div>
+
+                            <div class="localFiles ref" style="display: none;">
+                                <button>Switch to CDN</button>
+                                <pre><code><span>&lt;</span>script src="scripts/jquery-1.11.3.min.js"&gt;&lt;<span>/script&gt;</span>
+
+<span>&lt;</span>link href="dist/roundslider.min.css" rel="stylesheet" /&gt;
+
+<span>&lt;</span>script src="dist/roundslider.min.js"&gt;&lt;<span>/script&gt;</span>
+</code></pre>
+                            </div>
+                            <p class="ref-note" style="display: none;">
+                                <b>Note</b> : If you want to use the local files then you can
+                                <a target="_blank" href="http://roundsliderui.com/download.html"> download </a>
+                                the source and then use that files.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Step 2 : Add the HTML markup</h3>
+                            
+                            <p>Include the below HTML element in your application, at where you want to render the control.</p>
+
+                            <pre><code><span>&lt;</span>div id="slider"&gt;&lt;<span>/div&gt;</span></code></pre>
+                        </div>
+
+                        <div>
+                            <h3>Step 3 : Call the roundSlider</h3>
+                            
+                            <p>From the script section, you can call the roundSlider with corresponding DOM object.</p>
+
+                            <pre><code>$("#slider").roundSlider();</code></pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"><div class="bottom-bar"><div class="ctr"><span>Copyright © 2015 - 2018</span><a target="_blank" href="https://github.com/soundar24/roundSlider">Github</a><a target="_blank" href="http://roundsliderui.com/download.html">Download</a><a target="_blank" href="http://roundsliderui.com/contactme.html">Contact me</a><a target="_blank" href="http://roundsliderui.com/donate.html">Donate</a><a target="_blank" href="http://roundsliderui.com/licence.html">Licence</a></div></div></div>
+
+
+
+</body></html>

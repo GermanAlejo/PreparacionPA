@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de plugins - Examen JS/JQ</title>
+        <link rel="stylesheet" href="css/timeline.min.css" />
+        <link rel="stylesheet" href="css/roundslider.min.css" />
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Categorías del Índice Metropolitano de Calidad del Aire</h1>
+        <h2><a href="https://es.wikipedia.org/wiki/Índice_Metropolitano_de_la_Calidad_del_Aire">https://es.wikipedia.org/wiki/Índice_Metropolitano_de_la_Calidad_del_Aire</a></h2>
+        
+        <div class="timeline-container">
+          <div class="timeline">
+            <div data-time="Bajo">
+                <div id="slider1"></div>
+                <p>
+                    Cuando el índice se encuentra entre 0 y 50 puntos IMECA, la calidad del aire se considera como satisfactoria y la contaminación del aire tiene poco o nulo riesgo para la salud.
+                </p>
+            </div>
+            <div data-time="Medio">
+                <div id="slider2"></div>
+                <p>
+                    Cuando el índice se encuentra entre 51 y 100 puntos IMECA, la calidad del aire es aceptable, sin embargo algunos contaminantes pueden tener un efecto moderado en la salud para un pequeño grupo de personas que presentan una gran sensibilidad a algunos.
+                </p>
+            </div>
+            <div data-time="Alto">
+                <div id="slider3"></div>
+                <p>
+                    Cuando el índice se encuentra entre 101 y 150 puntos IMECA, algunos grupos sensibles pueden experimentar efectos en la salud. Hay algunas personas que pueden presentar efectos a concentraciones menores que el resto de la población, como es el caso de personas con problemas respiratorios o cardíacos, los niños y ancianos. El público en general puede no presentar riesgos cuando el Imeca está en este intervalo.
+                </p>
+            </div>
+            <div data-time="Muy alto">
+                <div id="slider4"></div>
+                <p>
+                    Cuando el índice se encuentra entre 151 y 200 puntos (IMECA), toda la población experimenta efectos negativos en la salud. Los miembros de grupos sensibles pueden presentar molestias graves.
+                </p>
+            </div>
+          </div>
+        </div>        
+   </body>
+</html>

@@ -1,0 +1,36 @@
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>PA - Examen PHP - Recuperacion (2018)</title>
+            </head>
+            <body>
+                <h1>Gestor de archivos</h1>
+                <h2>Bienvenido Usuario.</h2>
+                <h3>¡Tienes 9 MB de espacio libre!</h3>
+                <form action='logout.php' method='POST'>
+                    <input type='submit' name='btnLogout' value='Cerrar sesi&oacute;n'/>                
+                </form>
+                <hr>
+                <form action="#" method="POST">
+                    <table cellpadding="10" border="1">
+                        <tr>
+                            <th></th>
+                            <th>Nombre</th>
+                            <th>Tamaño</th>
+                            <th>Versiones</th>
+                        </tr>
+						<tr>
+                        <td align='center'></td>
+                        <td align='center'>Nombre archivo.txt</td>
+                        <td align='center'>1 MB</td>
+                        <td align='center'><a href='#'>1</a> <a href='#'>2</a></td>
+                        </tr>               
+                    </table>           
+                    <input type='submit' name='btnBorrar' value='Eliminar archivo/s'/>
+                </form>
+                <form action="alta_archivo.php" method="POST">
+                    <input type='submit' name='btnNuevoArchivo' value='Nuevo Archivo'/>
+                </form>
+            </body>
+        </html>

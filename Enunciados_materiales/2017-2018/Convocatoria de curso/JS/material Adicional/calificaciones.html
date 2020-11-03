@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calificaciones - PA - Examen JS, jQuery, Plugins</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/funcExamen1.js"></script>
+        <script type="text/javascript">
+
+        </script>
+    </head>
+    <body>
+        <h1>Calificaciones - PA - Examen JS, jQuery, Plugins</h1>
+
+        <form id="dataForm" action="#" method="post">
+            <table border="1">
+				<tr id="calificaciones">
+				<td><input id="c1" type='number' class="calificacion" value="4" /></td>
+				<td><input id="c2" type='number' class="calificacion" value="5" /></td>
+				<td><input id="c3" type='number' class="calificacion" value="7" /></td>
+				<td><input id="c4" type='number' class="calificacion" value="9" /></td>
+				<td><input id="c5" type='number' class="calificacion" value="10" /></td>
+				<td><input id="c6" type='number' class="calificacion" value="-2" /></td>
+				</tr>
+				<tr id="anotaciones">
+				<td id="c1_anotaciones"></td>
+				<td id="c2_anotaciones"></td>
+				<td id="c3_anotaciones"></td>
+				<td id="c4_anotaciones"></td>
+				<td id="c5_anotaciones"></td>
+				<td id="c6_anotaciones"></td>
+				</tr>
+            </table>
+            <br>
+			Crear nuevas calificaciones:
+            <select id='nuevasCalificaciones'> 
+                <option value="-">-</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="30">30</option>
+                <option value="Personalizado">Personalizado</option>
+            </select>
+            <div id='longitudNuevasCalificaciones' style='display:none'>
+                <input id="longitud" type='text' onkeyup="validar(this)"/>
+                <button onclick="crearNuevasCalificaciones( $('#longitud').val() )" type="button">Crear</button>
+            </div>
+        </form>
+    </body>
+</html>

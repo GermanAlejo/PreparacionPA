@@ -1,0 +1,30 @@
+Introducción
+La misión Apolo 5 también recibió el nombre de AS-204 o 03106. El lanzamiento se produjo el 22 de enero de 1968 (hoy, día del examen, hace 50 años), desde Cabo Cañaveral en Estados Unidos. El amerizaje se produjo el 24 de enero de ese mismo año. Fue un vuelo no tripulado que pertenecía al grupo de misiones llevadas a cabo dentro del programa Apolo. El Saturno / Apollo 5 fue el primer vuelo de prueba del módulo lunar.
+
+Objetivos de la misión
+Los objetivos de la misión Apolo 5 fueron verificar las fases de ascenso y descenso, los sistemas de propulsión y las operaciones de reinicio. También se evaluó la estructura de la nave y el funcionamiento del módulo lunar. La misión fue un éxito y el funcionamiento de todos los sistemas del módulo lunar fue confirmado.
+
+Lanzamiento
+Para esta misión se utilizó un lanzador Saturno IB como vehículo impulsor, el cual se mantendría en órbita, para así dirigir la nave espacial a aproximadamente 18 000 km de distancia de la Tierra. posteriormente se encendió el motor del módulo de mando, para que de esta forma la cápsula alcanzara una velocidad de 40.000km/h al regresar a la órbita terrestre, dicho vuelo fue todo un éxito, ya que los sistemas térmicos de protección funcionaron.
+
+Parámetros orbitales
+
+    Periapsis:  162.0 km 
+    Apoapsis:     214.0 km
+    Periodo:      89.5 minutes
+    Inclinación:  31.600000381469727°
+    Excentricidad:   0.003957000095397234
+	
+Historia
+
+Los planes iniciales se vieron modificados el 25 de mayo de 1961 con el anuncio del presidente John F. Kennedy de enviar y depositar un hombre en la Luna, y traerlo de vuelta a salvo antes de que finalizara la década. Este objetivo se alcanzó el 20 de julio de 1969, cuando Neil Armstrong y Edwin Buzz Aldrin a bordo de la Apolo 11 alunizaron en el Mar de la Tranquilidad. Este hito histórico se retransmitió a todo el planeta desde las instalaciones del Observatorio Parkes (Australia).
+
+En un principio, el paseo lunar iba a ser retransmitido a partir de la señal que llegase a la estación de seguimiento de Goldstone (California, Estados Unidos), perteneciente a la Red del Espacio Profundo, pero ante la mala recepción, se optó por utilizar la señal de la estación Honeysuckle Creek, cercana a Canberra (Australia). Ésta retransmitió los primeros minutos, tras los cuales la señal del Observatorio Parkes fue utilizada de nuevo durante el resto del paseo.
+
+Las estaciones de seguimiento de Maspalomas, (Gran Canaria, España), Estación Apolo, Fresnedillas de la Oliva y Robledo de Chavela (Madrid, España), las dos primeras pertenecientes a la Red de NASA de Vuelos Tripulados, (hoy desaparecida), y la tercera perteneciente a la Red del Espacio Profundo actualmente denominada MDSCC participaron en todas las misiones del Proyecto de una forma primordial.
+
+El Proyecto Apolo fue uno de los triunfos más importantes de la tecnología moderna. Seis misiones lograron posarse sobre la superficie lunar (Apolo 11, 12, 14, 15, 16 y 17) con un solo fallo: la misión Apolo 13 no pudo concretar su meta por la explosión del tanque de oxígeno líquido del módulo de servicio, pero la tripulación regresó a salvo.
+
+Previo a las misiones con descenso proyectado a la superficie de la Luna, se probaron los sistemas de vuelo en varios lanzamientos automáticos (Apolo 2, 3, 4, 5 y 6 ), y después hubo dos pruebas tripuladas en órbita terrestre (Apolo 7 y 9), y dos misiones solo orbitales (sin alunizaje) a la Luna (Apolo 8 y 10). En 1973, una vez finalizado el programa lunar, tres naves Apolo fueron usadas para enviar tripulaciones a la estación espacial Skylab (misiones SL-2, SL-3 y SL-4) y en 1975 fue lanzada la última nave Apolo, para la misión Apolo-Soyuz.
+
+Más detalles en: https://nssdc.gsfc.nasa.gov/nmc/masterCatalog.do?sc=1968-007A
