@@ -1,0 +1,109 @@
+body{
+    background-image: url("img/bg.png");
+    margin: 0%;
+}
+
+header{
+    background-color: white;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+header h1{
+    font-variant: small-caps;
+    font-size: 25px;
+}
+
+header h2{
+    font-family: serif;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+#indice{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#indice ul{
+    margin: 0;
+    padding: 1%;
+    text-align: center;
+}
+
+#indice ul li{
+    display: inline;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+}
+
+#indice a{
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.galeria{
+    width: 20%;
+    float: right;
+}
+
+.galeria figure, img{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.principal{
+    width: 70%;
+    float: left;
+    background-color: white;
+}
+
+.principal{
+    padding: 5%;
+    text-align: justify;
+}
+
+.principal h1{
+    font-size: 20px;
+    padding-top: 0;
+}
+
+.principal figure{
+    width: 20%;
+    padding-left: 0;
+    padding-right: 0;
+    float: right;
+    
+}
+
+.principal img{
+    width: 100%;
+}
+
+.principal article{
+    border-top: grey solid 2px;
+}
+
+.cita{
+    background-color: black;
+    opacity: 70%;
+    padding: 3%;
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    clear: both;
+}
+
+footer{
+  
+    position: relative;
+    clear: both;
+}
+
+
+
