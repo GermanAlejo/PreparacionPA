@@ -1,0 +1,106 @@
+body{
+    background-image: url('img/fondo.jpg');
+}
+
+header{
+    background-color: brown;
+    color: white;
+}
+
+h1{
+    font-variant: normal;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+.indice{
+    width: 20%;
+    float: left;
+    clear: both;
+    overflow: hidden;
+    border: thick brown solid;
+    background-color: rgb(255,255,255);
+    color: brown;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.indice a{
+    color: brown;
+}
+
+.indice ul li{
+    display: inline;
+}
+
+.anuncios{
+    border: thin brown dashed;
+}
+
+.anuncios img{
+    margin: 1em;
+    width: 15%;
+}
+
+.indice h2{
+    font-size: 100%;
+    text-align: center;
+}
+
+.principal{
+    float: right;
+    width: 75%;
+}
+
+.principal h2{
+    border-bottom: thin brown solid;
+}
+
+.principal h3{
+    font-style: oblique;
+}
+
+.preguntas{
+    margin-right: 3%;
+    margin-left: 3%;
+    border: thick brown solid;
+    background-color: #FFFFFF;
+}
+
+.preguntas h5{
+    margin-top: 0%;
+}
+
+.image{
+    width: 40%;
+    border: thin brown solid;
+    padding: 1em;
+    position: relative;
+    float: right;
+}
+
+.image img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    background-color: darkslateblue;
+    color: white;
+    position: relative;
+    clear: both;
+}
+
+footer a{
+    color:white;
+}

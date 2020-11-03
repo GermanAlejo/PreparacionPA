@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    background-color: #aaa;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.65;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: white;
+}
+
+header{
+    background-image: url("images/banner.jpg");
+    padding: 30px 15%;
+    text-align: center;
+}
+
+header h1{
+    color: #f1f1f1;
+}
+
+header h2{
+    color: #be4e86;
+}
+
+#navegacion{
+    overflow: hidden;
+    color: #f2f2f2;
+    background-color: #333;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navegacion ul li{
+    display: inline;
+}
+
+#navegacion ul li a{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+#navegacion a:hover{
+    background-color: #be4e86;
+    color: white;
+    font-weight: bold;
+}
+
+#indice{
+    
+    padding: 10px;
+    width: 25%;
+    float: left;
+    clear: both;
+    
+}
+
+#indice img{
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+#seccion{
+    
+    padding: 5%;
+    background-color: #d9d9d9;
+    float:right;
+    width: 60%;
+    
+}
+
+.imagenes{
+    
+    width: 60%;
+    border: solid 2px #a5a5a5;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+table{
+    
+    background-color: #ddd;
+    border: solid 2px #a5a5a5;
+    border-radius: 5px;
+    
+}
+
+.primera{
+    color: #be4e86;
+    font-size: 10%;
+    font-weight: bold;
+    padding: 0.75;
+}
+
+.fila{
+    
+    background-color: #efefef;
+    padding: 0.75;
+        
+}
+
+table a{
+    color: black;
+    text-decoration: underline;
+}
+
+.code{
+    border: solid 2px #a5a5a5;
+    font-family: monospace;
+    font-size: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    margin-bottom: 2%;
+    background-color: #fcfcfc;
+}
+
+footer{
+    
+    color: #eee;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    clear: both;
+    
+}
+
+
