@@ -12,12 +12,12 @@ header{
 
 header h1{
     font-variant: small-caps;
-    font-size: 25px;
+    font-size: 25pt;
 }
 
 header h2{
     font-family: serif;
-    letter-spacing: 2px;
+    letter-spacing: 2pt;
     font-weight: 100;
 }
 
@@ -42,12 +42,13 @@ header h2{
 #indice a{
     color: white;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 10pt;
 }
 
 .galeria{
+    padding: 1%;
     width: 20%;
-    float: right;
+    float: right
 }
 
 .galeria figure, img{
@@ -58,7 +59,10 @@ header h2{
 }
 
 .principal{
-    width: 70%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    padding: 5%;
+    width: 60%;
     float: left;
     background-color: white;
 }
@@ -69,7 +73,7 @@ header h2{
 }
 
 .principal h1{
-    font-size: 20px;
+    font-size: 18pt;
     padding-top: 0;
 }
 
@@ -78,19 +82,21 @@ header h2{
     padding-left: 0;
     padding-right: 0;
     float: right;
-    
+
 }
 
 .principal img{
     width: 100%;
 }
 
-.principal article{
-    border-top: grey solid 2px;
+.principal  article{
+    border-bottom: grey solid 2px;
 }
 
+
 .cita{
-    background-color: black;
+    
+    background-color: rgba(0,0,0,255);
     opacity: 70%;
     padding: 3%;
     color: white;
@@ -99,10 +105,82 @@ header h2{
     clear: both;
 }
 
+.cita h2:before{
+    content: "\0022";
+    font-size: 30pt;
+    color: red;
+}
+
+.cita h2:after{
+    content: "\0022";
+    font-size: 30pt;
+    color: red;
+}
+
+.cita h2{
+    font-size: 15pt;
+    font-weight: 900;
+}
+.cita h5{
+    font-weight: 10;
+}
+
+#tabla{
+    text-align: center;
+    width: 80%;
+}
+
+#tabla table{
+    margin: 0px auto;
+
+}
+
+#tabla table td{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 1%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+#tabla table tr:first-child{
+    background-color: black;
+    color: white;
+    font-size: 12pt;
+}
+
+.primero{
+    background-color: #E2D815;
+}
+
+.segundo{
+    background-color: #C0BCB8;
+}
+
+.tercero{
+    background-color: #BF7732;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
 footer{
-  
+    background-color: black;
+    color: white;
     position: relative;
     clear: both;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    text-align: center;
+}
+
+footer a{
+    color: red;
 }
 
 
