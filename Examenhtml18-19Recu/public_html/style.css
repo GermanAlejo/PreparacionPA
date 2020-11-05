@@ -32,15 +32,18 @@ header h1:first-letter{
     background-color: #223A5E;
     color: white;
     margin: 2em 0 2em;
-    text-align: center;
     overflow: hidden;
     float: left;
     padding: 5px;
     box-sizing: border-box;
 }
 
+#indice h3{
+    text-align: center;
+}
+
 .principal{
-    margin: 0 20% 0 15%;
+    margin: 0 10% 0 10%;
     width: 60%;
     box-sizing: border-box;
     display: inline-block;
@@ -103,16 +106,18 @@ header h1:first-letter{
 
 .imgPabellones{
     margin-top: 2em;
+    display: flex;
 }
 
 .imgPabellones figure{
     width: 20%;
-    display: inline-block;
+    flex: 1 1 33%;
+    text-align: center;
 }
 
 .imgPabellones figure img{
     width: 100%;
-    margin-left: 10%;
+   
 }
 
 footer{
