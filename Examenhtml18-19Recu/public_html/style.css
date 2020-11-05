@@ -1,0 +1,128 @@
+body{
+    background-image: url("img/fondo.jpg");
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+a{
+    text-decoration: none;
+    color: #F6D155;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header{
+    background-color:  #223A5E;
+    border-bottom: solid grey 5px;
+    text-align: center;
+    font-size: 1.8em;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: white;
+}
+
+header h1:first-letter{
+    font-size: 1.5em;
+}
+
+#indice{
+    width: 15%;
+    background-color: #223A5E;
+    color: white;
+    margin: 2em 0 2em;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.principal{
+    margin: 0 20% 0 15%;
+    width: 60%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.principal h2{
+    color: brown;
+    border-bottom: solid thin brown;
+}
+
+#destacados{
+    color: brown;
+    font-style: oblique;
+}
+
+.tabla{
+    text-align: center;
+    margin: auto;/*centrar table*/
+    border-spacing: 10px;
+    border: none;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.table tr{
+    color: black;
+}
+
+.tabla tr:nth-child(even){
+    background-color: #D49F75;
+}
+
+.tabla tr:nth-child(odd){
+    background-color: #C48F65;
+}
+
+.tabla tr:first-child{
+    color: white;
+    background-color: #223A5E;
+
+}
+
+.figura{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.figura figcaption{
+    text-align: center;
+    font-style: oblique;
+    margin-top: 10px;
+    
+}
+
+.figura img{
+    border: solid 3px grey;
+}
+
+.imgPabellones{
+    margin-top: 2em;
+}
+
+.imgPabellones figure{
+    width: 20%;
+    display: inline-block;
+}
+
+.imgPabellones figure img{
+    width: 100%;
+    margin-left: 10%;
+}
+
+footer{
+    border-top: solid grey 5px;
+    padding: 1em 0 1em;
+    text-align: center;
+    background-color: #223A5E;
+    color: white;
+    clear: both;
+    position: relative;
+    margin-bottom: 0;
+}
+
