@@ -46,6 +46,7 @@ if (isset($_POST['btnRegistrar'])) {
                 $_SESSION['id'] = $id;
                 
                 //falta carpeta fotos
+                
 
                 desconectar($con);
                 header('location: login.php');
