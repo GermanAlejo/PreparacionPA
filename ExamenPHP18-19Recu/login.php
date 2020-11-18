@@ -32,7 +32,7 @@
                 $_SESSION['nombre'] = $aux['nombre'];
                 $_SESSION['id'] = $aux['id'];
                 
-                header('location: listado_contactos.html');
+                header('location: listado_contactos.php');
                 
             }else{
                 echo 'La contraseña no es correcta';
