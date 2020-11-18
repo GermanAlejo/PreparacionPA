@@ -9,7 +9,7 @@ function dbConnection() {
     if (!$con) {
         die("ERROR: Can't connect to host");
     }
-    $db = mysqli_select_db($con, "gestortareas");
+    $db = mysqli_select_db($con, "agenda");
 
     if (!$db) {
         die("ERROR: Can't connect to DB ");

@@ -3,15 +3,17 @@
 include 'functions.php';
 
 if (isset($_POST['btnRegistrar'])) {
-
-    if (isset($_POST['usuario']) && isset($_POST['password']) && isset($_POST['email'])) {
+    
+    if (count(array_filter($_POST))!= count($_POST)) {
+        echo 'Rellene todos los campos';
+    }else{
 
         $arraySanitize = array(
             'usuario' => FILTER_SANITIZE_STRING,
             'password' => FILTER_SANITIZE_STRING,
             'email' => FILTER_SANITIZE_EMAIL
         );
-
+        
         $formInput = filter_input_array(INPUT_POST, $arraySanitize);
 
         $nombre = $formInput['usuario'];
@@ -25,7 +27,7 @@ if (isset($_POST['btnRegistrar'])) {
         $query1 = mysqli_query($con, $sqlExiste);
 
         if (mysqli_num_rows($query1) > 0) {
-            echo 'Usuario ya registrado';
+            echo 'Registro fallido';
             mysqli_close($con);
         } else {
 
@@ -36,26 +38,32 @@ if (isset($_POST['btnRegistrar'])) {
                     . "'" . $email . "')";
 
             $res = mysqli_query($con, $sqlInsert);
-
+            
             if (!$res) {
                 echo 'error al insertar';
                 desconectar($con);
             } else {
 
                 $_SESSION['user'] = $nombre;
-                $_SESSION['id'] = $id;
+                //gets last inserted id
+                $_SESSION['id'] =  mysqli_insert_id($con);
                 
-                //falta carpeta fotos
-                
+                //creamos carpeta fotos para el usuario
+                $newRuta = "user" . $_SESSION['id'];
+                mkdir('fotos/' . $newRuta, 0777, true);
+                /*
+                 * La funcion mkdir crea automaticamente la carpeta raiz 
+                 * si esta no existe
+                 */
 
                 desconectar($con);
                 header('location: login.php');
             }
         }
     }
-} else {
-    header('location: login.php');
+    
 }
+
 ?>
 
 <!DOCTYPE html>

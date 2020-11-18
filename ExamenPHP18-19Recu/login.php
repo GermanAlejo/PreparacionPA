@@ -3,8 +3,8 @@
     include 'functions.php';
 
     if(isset($_POST['btnRegistro'])){
-        header('Location: registro.php');
-    }else if($_POST['btnLogin']){
+        header('location: registro_usuario.php');
+    }else if(isset($_POST['btnLogin'])){
         
         $arraySanitize = array(
             'usuario' => FILTER_SANITIZE_STRING,
