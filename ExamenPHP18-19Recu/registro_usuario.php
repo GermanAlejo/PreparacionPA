@@ -44,6 +44,7 @@ if (isset($_POST['btnRegistrar'])) {
                 desconectar($con);
             } else {
 
+                session_start();
                 $_SESSION['nombre'] = $nombre;
                 //gets last inserted id
                 $_SESSION['id'] =  mysqli_insert_id($con);

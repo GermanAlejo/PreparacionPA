@@ -16,7 +16,7 @@
         $nombre = $formInput['usuario'];
         $pass = $formInput['password'];
         
-        $sql = "SELECT nombre, clave FROM usuarios WHERE nombre LIKE '" . $nombre . "';";
+        $sql = "SELECT id, nombre, clave FROM usuarios WHERE nombre LIKE '" . $nombre . "';";
         
         $con = dbConnection();
         
@@ -30,8 +30,7 @@
                 
                 session_start();
                 $_SESSION['nombre'] = $aux['nombre'];
-                $_SESSION['id'] = $aux['id'];
-                
+                $_SESSION['id'] =  $aux['id'];
                 header('location: listado_contactos.php');
                 
             }else{
