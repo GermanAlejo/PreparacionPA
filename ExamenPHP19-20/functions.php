@@ -30,3 +30,38 @@ function logOut($nombre){
     
 }
 
+
+function jedisDisponibles($fechaInicio, $misiones){
+    
+    $jedisDisponibles = array();
+    
+    foreach ($misiones as $mision){
+        
+        if($mision['fecha_fin'] < $fechaInicio){
+            $jedisDisponibles[] = $mision['jedi_asociado'];
+        }
+        
+    }
+    
+    return $jedisDisponibles;
+}
+
+function asignarPadawan($jedi, $misionID){
+    
+    $res = false;
+    
+    $sql = "UPDATE misiones SET jedi_asociado='$jedi' WHERE id='" . $misionID . "'";
+    
+    $con = dbConnection();
+    
+    $query = mysqli_query($con, $sql);
+    
+    if(!$query){
+        echo "Error update";
+    }else{
+        $res = true;
+    }
+    
+    return $res;
+    
+}

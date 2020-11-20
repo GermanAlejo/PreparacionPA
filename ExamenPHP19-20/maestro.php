@@ -1,5 +1,5 @@
 <?php
-include functions . php;
+include 'functions.php';
 
 session_start();
 
@@ -9,10 +9,54 @@ if (isset($_SESSION['nombre']) && $_SESSION['rango'] === 'M') {
         setcookie('nombre', $nombre, time() + 3600 * 24 * 14);
         session_destroy();
         header('location: login.php');
+        
+        
+    }else if(isset($_POST['asignar'])){
+        
+        $misionID = $_POST['misionSeleccionada'];
+        $jedi = $_POST['padawanseleccionado'];
+        echo 'loko';
+        $res = asignarPadawan($jedi, $misionID);
+        
+        if(!$res){
+            echo "Error al asignar Jedi";
+        }else{
+            header('location: maestro.php');
+        }
+        
+    }else if(isset($_POST['altamision'])){
+        
+        echo 'loko';
+        
     } else {
+
+        $con = dbConnection();
+
+        $sql = "SELECT * FROM misiones ORDER BY fecha_inicio ASC";
+
+        $result = mysqli_query($con, $sql);
         
-        
-        
+        if (!$result) {
+            echo 'Error sql';
+        } else {
+            
+            $numMisiones = mysqli_num_rows($result);
+
+            //$misiones = array();
+            $misionesCon = array();
+            $misionesSin = array();
+
+            for ($i = 0; $i < $numMisiones; $i++) {
+                
+                $aux = mysqli_fetch_array($result);
+                
+                if ($aux['jedi_asociado'] === null || $aux['jedi_asociado'] === "") {
+                    $misionesSin[] = $aux;
+                } else {
+                    $misionesCon[] = $aux;
+                }
+            }
+        }
     }
 } else {
     header('location: login.php');
@@ -43,40 +87,39 @@ if (isset($_SESSION['nombre']) && $_SESSION['rango'] === 'M') {
                 <th>Ficha</th>
                 <th>Finalizar</th>
             </tr>
-            <tr>
-                <td>Utapau</td>
-                <td>Misión en Utapau</td>
-                <td>2019-01-01</td>
-                <td>2019-12-08</td>
-                <td>anakin</td>
-                <td>
-                    <a target='_blank' href="fichas_misiones/Utapau.pdf">Utapau.pdf</a>
-                </td>
-                <td>
-                    <form action='#' method='post'>
-                        <input type='submit' name='finalizar' value='FINALIZAR' disabled="True" />
-                        <input type='hidden' value="1" name='idMision'/>
-                    </form>
-                </td>
-            <tr>
-            <tr>
-                <td>Geonosis</td>
-                <td>mision geonosis</td>
-                <td>2019-12-07</td>
-                <td></td>
-                <td>ahsoka</td>
-                <td>
-                    <a target='_blank' href="fichas_misiones/Geonosis.pdf">Geonosis.pdf</a>
-                </td>
-                <td>
-                    <form action='#' method='post'>
-                        <input type='submit' name='finalizar' value='FINALIZAR'/>
-                        <input type='hidden' value="2" name='idMision'/>
-                    </form>
-                </td>
-            </tr>		
-        </table>
 
+            <?php
+            
+            $numRows = sizeof($misionesCon);
+
+            for ($i = 0; $i < $numRows; $i++) {
+                
+                if ($misionesCon[$i]['ficha_mision'] !== null) {
+                    $rutaFichero = "fichas_misiones/" . $misionesCon[$i]['ficha_mision'];
+                } else {
+                    $rutaFichero = "";
+                }
+                ?>
+                <tr>
+                    <td><?php echo $misionesCon[$i]['titulo'] ?></td>
+                    <td><?php echo $misionesCon[$i]['descripcion'] ?></td>
+                    <td><?php echo $misionesCon[$i]['fecha_inicio'] ?></td>
+                    <td><?php echo $misionesCon[$i]['fecha_fin'] ?></td>
+                    <td><?php echo $misionesCon[$i]['jedi_asociado'] ?></td>
+                    <td>
+                        <a target='_blank' href="<?php echo $rutaFichero; ?>"><?php echo $misionesCon[$i]['ficha_mision']; ?></a>
+                    </td>
+                    <td>
+                        <form action='#' method='post'>
+                            <input type='submit' name='finalizar' value='FINALIZAR'/>
+                            <input type='hidden' value="<?php echo $misionesCon[$i]['id']; ?>" name='idMision'/>
+                        </form>
+                    </td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
 
         <h1>Misiones sin asignar a ningun jedi</h1>
 
@@ -89,28 +132,58 @@ if (isset($_SESSION['nombre']) && $_SESSION['rango'] === 'M') {
                 <th>Ficha</th>
                 <th>Asignar</th>
             </tr>
-            <form action='#' method='post'>
-                <tr>
-                    <td>Coruscant</td>
-                    <td>Mision Coruscant</td>
-                    <td>2019-12-09</td>
-                    <td>
-                        <select name='padawanseleccionado'>
-                            <option value='SIN ASIGNAR' selected>SIN ASIGNAR</option>
-                            <option value='anakin'>anakin</option>
-                            <option value='ahsoka'>ahsoka</option>
-                        </select>
-                    </td>
-                    <td>
-                        <a target='_blank' href="fichas_misiones/Coruscant.pdf">Coruscant.pdf</a>
-                    </td>
-                    <td>
-                        <input type='hidden' name='misionSeleccionada' value='3'/>
-                        <input type='hidden' name='fechaMSeleccionada' value='fechaInicio'/>
-                        <input type='submit' name='asignar' value='ASIGNAR'/> 
-                    </td>
-                </tr>
-            </form>
+
+
+            <?php
+            $numRowsSin = sizeof($misionesSin);
+
+            for ($i = 0; $i < $numRowsSin; $i++) {
+
+                if ($misionesSin[$i]['ficha_mision'] !== null) {
+                    $rutaFichero = "fichas_misiones/" . $misionesSin[$i]['ficha_mision'];
+                } else {
+                    $rutaFichero = "";
+                }
+                ?>
+
+
+                <form action='#' method='post'>
+                    <tr>
+                        <td><?php echo $misionesSin[$i]['titulo'] ?></td>
+                        <td><?php echo $misionesSin[$i]['descripcion'] ?></td>
+                        <td><?php echo $misionesSin[$i]['fecha_inicio'] ?></td>
+                        <td>
+                            <?php
+                            $jedisDisponibles = jedisDisponibles($misionesSin[$i]['fecha_inicio'], $misionesCon);
+                            ?>
+
+                            <select name='padawanseleccionado'>
+
+                                
+
+                                <?php
+                                foreach ($jedisDisponibles as $jedi) {
+                                    ?>
+                                    <option value='<?php echo $jedi; ?>'><?php echo $jedi; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </td>
+                        <td>
+                            <a target='_blank' href="<?php echo $rutaFichero; ?>"><?php echo $misionesSin[$i]['ficha_mision']; ?></a>
+                        </td>
+                        <td>
+                            <input type='hidden' name='misionSeleccionada' value='<?php echo $misionesSin[$i]['id']; ?>'/>
+                            <input type='hidden' name='fechaMSeleccionada' value='<?php echo $misionesSin[$i]['fecha_inicio']; ?>'/>
+                            <input type='submit' name='asignar' value='ASIGNAR'/> 
+                        </td>
+                    </tr>
+                </form>
+
+                <?php
+            }
+            ?>
         </table>
 
         <br><br>
