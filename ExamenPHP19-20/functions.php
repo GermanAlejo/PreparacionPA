@@ -9,6 +9,7 @@ function dbConnection() {
     if (!$con) {
         die("ERROR: Can't connect to host");
     }
+    
     $db = mysqli_select_db($con, "guerrasclon");
 
     if (!$db) {
@@ -63,5 +64,19 @@ function asignarPadawan($jedi, $misionID){
     }
     
     return $res;
+    
+}
+
+function nuevaMision($titulo, $descripcion, $fecha_inicio, $ficha_mision, $jedi){
+    
+    $sql = "INSERT INTO misiones (id, titulo, descripcion, fecha_inicio, fecha_fin, ficha_mision, jedi_asociado)"
+            . " VALUES (NULL, ,'" . $titulo . "', '" . $descripcion . "', '" . $fecha_inicio . "', '', '" . $jedi . "')";
+    
+    $con = dbConnection();
+    
+    $query = mysqli_query($con, $sql);
+    
+    return $query;
+    
     
 }

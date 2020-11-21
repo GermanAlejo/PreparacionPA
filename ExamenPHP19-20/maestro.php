@@ -15,7 +15,7 @@ if (isset($_SESSION['nombre']) && $_SESSION['rango'] === 'M') {
         
         $misionID = $_POST['misionSeleccionada'];
         $jedi = $_POST['padawanseleccionado'];
-        echo 'loko';
+        
         $res = asignarPadawan($jedi, $misionID);
         
         if(!$res){
@@ -26,7 +26,7 @@ if (isset($_SESSION['nombre']) && $_SESSION['rango'] === 'M') {
         
     }else if(isset($_POST['altamision'])){
         
-        echo 'loko';
+        header('location: altamision.php');
         
     } else {
 
