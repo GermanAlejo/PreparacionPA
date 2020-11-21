@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Procesamiento de formularios</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/comprobacion.js"></script>
+	<style>
+		.error{color:red;}
+	</style>
+</head>
+<body>
+	<h1>Registro de agrupaciones COAC</h1>
+
+	<div id="erroresEnvio"></div>
+
+	<form action="#" name="registro" id="registroForm" method="post">
+		<label>Nombre de la agrupación</label> <br>
+		<input type="text" name="agrupacion">
+		<br>
+		<label>Ciudad de origen</label> <br>
+		<input type="text" name="ciudad" id="ciudad">
+		<br>
+		<label>Persona de contacto</label> <br>
+		<input type="text" name="contacto" id="contacto">
+		<br>
+		<label>Email</label> <br>
+		<input type="email" name="email" id="email">
+		<br>
+		<label>Modalidad</label> <br>
+		<input type="radio" name="modalidad" value="comparsa">Comparsa <br>
+		<input type="radio" name="modalidad" value="chirigota">Chirigota <br>
+		<input type="radio" name="modalidad" value="cuarteto">Cuarteto <br>
+		<input type="radio" name="modalidad" value="coro">Coro <br>
+		<br>
+		<label>Integrantes de la agrupación</label> <br>
+		<input type="number" name="numeroIntegrantes" id="numIntegrantes">
+		<div id="componentes"></div>
+
+		<br><br>
+		<button type="submit">Registrar</button>
+	</form>
+</body>
+</html>
