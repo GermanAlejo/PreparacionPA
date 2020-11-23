@@ -18,13 +18,18 @@
 $(document).ready(function () {
 
     var inputsFocus = $("input");
-
-    inputsFocus.focusin(enfocado(inputsFocus));
-    inputsFocus.focusout(comprobarVacio(inputsFocus));
+    for (var input of inputsFocus) {
+        $(input).focus(function (e) {
+            enfocado(this); });
+        $(input).blur(function (e) {
+            comprobarVacio(this);
+        });
+    }
 
     var elemInte = document.getElementById('numIntegrantes');
 
-    $(elemInte).bind("focusout", function () {
+    $(elemInte).blur(function () {
+
         //alert("hola");
         var numInte = parseInt($(elemInte).val());
         var padreDiv = document.getElementById('componentes');
@@ -61,43 +66,52 @@ $(document).ready(function () {
 
         }
     });
+    
+    $("#registroForm").submit(function(){
+        
+    });
+    
 
 });
 
 function marcaError(elemento, mensaje) {
 
     var elemType = $(elemento).is("span");
-    //cosole.log("marcaError");
+    console.log("marcaError");
     var clase = $(elemento).attr("class");
-    alert($(elemento).name);
+
     if (!elemType && clase !== "error") {
-        $(elemento).css({'border': '2px, solid, red'});
+        // alert("hola");
+        $(elemento).css({'border': '2px solid red'});
         var newSpan = document.createElement("span");
         $(newSpan).addClass("error");
         $(newSpan).text(mensaje);
-        $(elemento).append(newSpan);
+        $(elemento).after(newSpan);
     }
 
 }
 
-function enfocado(elemento) {
+function enfocado(evento) {
+    console.log(evento);
+    $(evento).css({'border': '2px solid green'});
 
-    $(elemento).css({'border': 'solid, 2px, green'});
-
-    var spanHijo = $(elemento).next();
+    var spanHijo = $(evento).next();
 
     if ($(spanHijo).is("span")) {
-        $(spanHijo).remove().fadeOut("slow");
+        $(spanHijo).fadeOut("slow", function(){
+            $(spanHijo).remove();
+        });
+        
     }
 
 }
 
 function comprobarVacio(elemento) {
 
-    if ($(elemento).text() === "") {
+    if ($(elemento).val() === "") {
         marcaError(elemento, "error");
     } else {
-        $(elemento).css('border', 'none');
+        $(elemento).css('border', 'initial');
     }
 
 }
