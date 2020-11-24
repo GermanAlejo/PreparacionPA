@@ -1,19 +1,4 @@
 
-//$(function(){
-//    $('#prueba').click(function() {
-//        alert("Hello");
-//    });
-//});
-//
-//window.onload = function() {
-//    if (window.jQuery) {  
-//        // jQuery is loaded  
-//        alert("Yeah!");
-//    } else {
-//        // jQuery is not loaded
-//        alert("Doesn't Work");
-//    }
-//}
 
 $(document).ready(function () {
 
@@ -26,14 +11,24 @@ $(document).ready(function () {
         });
     }
 
+    var elemMod = $('input[name=modalidad]', '#registroForm');
+    var modalidad = $('input[name=modalidad]:checked', '#registroForm').val();
     var elemInte = document.getElementById('numIntegrantes');
+    $(elemInte).prevAll().eq(1).hide();
+    $(elemInte).hide();
+
+    $(elemMod).click(function () {
+        $(elemInte).prevAll().eq(1).show();
+        $(elemInte).show();
+    });
+
 
     $(elemInte).blur(function () {
 
         //alert("hola");
         var numInte = parseInt($(elemInte).val());
         var padreDiv = document.getElementById('componentes');
-        var modalidad = $('input[name=modalidad]:checked', '#registroForm').val();
+
 
         //vacia componentes
         $(padreDiv).empty();
@@ -66,11 +61,19 @@ $(document).ready(function () {
 
         }
     });
-    
-    $("#registroForm").submit(function(){
-        
+
+    $("#registroForm").submit(function () {
+        $(':focus').blur();
+        $("#registroForm").each(function () {
+            //alert("hola2");
+            var elem = $(this).find("span");
+            if($(elem).attr("class") === "error"){
+                alert("error");
+                $(this).preventDefault();
+            }
+        });
     });
-    
+
 
 });
 
@@ -92,16 +95,16 @@ function marcaError(elemento, mensaje) {
 }
 
 function enfocado(evento) {
-    console.log(evento);
+    //console.log(evento);
     $(evento).css({'border': '2px solid green'});
 
     var spanHijo = $(evento).next();
 
     if ($(spanHijo).is("span")) {
-        $(spanHijo).fadeOut("slow", function(){
+        $(spanHijo).fadeOut("slow", function () {
             $(spanHijo).remove();
         });
-        
+
     }
 
 }
