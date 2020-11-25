@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+                <script src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="factura.js"></script>
+	</head>
+	<body>
+            <h1>Formulario de facturación</h1>
+            
+            <div id="errores" style="background-color:red"></div>
+            
+            <form action="#" method="post" onsubmit="validarForm()">
+                <button type="button" id="botonMas" onclick="filaNueva()">
+                    +
+                </button>                
+                <button type="button" id="botonMenos">
+                    -
+                </button>
+                <table id="tabla" border="1" style="empty-cells:hide">
+                    <tr>
+                        <th>                            
+                        </th>
+                        <th>
+                            Descripci&oacute;n
+                        </th>
+                        <th>
+                            Precio unitario
+                        </th>
+                        <th>
+                            Unidades
+                        </th>                      
+                        <th>
+                            Tipo de IVA
+                        </th>
+                        <th>
+                           Total (Con IVA) 
+                        </th>
+                    </tr>
+                    <tr id="fila1">
+                        <td>
+                            <input type="checkbox" id="sf1" name="sf1" value="selected"/>
+                        </td>
+                        <td>
+                            <input type="text" id="descripcion1" name="descripcion1" onchange="actualizaTotal(this)" onfocus="conFoco(this)" onblur="sinFoco(this)" onsubmit="compruebaDescripcion(this)"/>
+                        </td>
+                        <td>
+                            <input type="text" id="precioUd1" name="precioUd1" onchange="actualizaTotal(this)" onfocus="conFoco(this)" onblur="sinFoco(this)"/>
+                        </td>
+                        <td>
+                            <input type="text" id="unidades1" name="unidades1" onchange="actualizaTotal(this)" onfocus="conFoco(this)" onblur="sinFoco(this)" onsubmit="compruebaUnidades(this)"/>
+                        </td>                        
+                        <td>
+                            <select name="tipoIva1" id="tipoIva1">
+                                <option value="21">21%</option>
+                                <option value="10">10%</option>
+                                <option value="4">4%</option>
+                            </select>
+                        </td>
+                        <td id="totalConIva1">
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>                        
+                        <td><strong>Suma total con IVA</strong></td>
+                        <td id="sumaTotalConIva">
+                            0
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" name="enviar" value="Enviar" />
+            </form>
+	</body>
+</html> 
